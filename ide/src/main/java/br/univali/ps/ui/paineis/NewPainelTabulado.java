@@ -242,6 +242,20 @@ public class NewPainelTabulado extends javax.swing.JPanel implements Themeable{
         espacador.setForeground(ColorController.COR_LETRA);
         
     }
+    
+    public void ocultarContainerCabecalhos()
+    {
+        remove(cabecalhosContainer);
+        revalidate();
+        repaint();
+    }
+    
+    public void exibirContainerCabecalhos()
+    {
+        add(cabecalhosContainer, java.awt.BorderLayout.PAGE_START);
+        revalidate();
+        repaint();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -251,15 +265,15 @@ public class NewPainelTabulado extends javax.swing.JPanel implements Themeable{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        cabecalhosContainer = new javax.swing.JPanel();
         espacador = new javax.swing.JPanel();
         cabecalhosAba = new javax.swing.JPanel();
         abaContainer = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setOpaque(false);
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        cabecalhosContainer.setOpaque(false);
+        cabecalhosContainer.setLayout(new java.awt.BorderLayout());
 
         espacador.setPreferredSize(new java.awt.Dimension(0, 30));
 
@@ -274,16 +288,16 @@ public class NewPainelTabulado extends javax.swing.JPanel implements Themeable{
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(espacador, java.awt.BorderLayout.EAST);
+        cabecalhosContainer.add(espacador, java.awt.BorderLayout.EAST);
 
         cabecalhosAba.setBorder(javax.swing.BorderFactory.createEmptyBorder(2, 0, 0, 0));
         cabecalhosAba.setMaximumSize(new java.awt.Dimension(32767, 40));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 0, 0);
         flowLayout1.setAlignOnBaseline(true);
         cabecalhosAba.setLayout(flowLayout1);
-        jPanel1.add(cabecalhosAba, java.awt.BorderLayout.CENTER);
+        cabecalhosContainer.add(cabecalhosAba, java.awt.BorderLayout.CENTER);
 
-        add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        add(cabecalhosContainer, java.awt.BorderLayout.PAGE_START);
 
         abaContainer.setLayout(new java.awt.CardLayout());
         add(abaContainer, java.awt.BorderLayout.CENTER);
@@ -293,8 +307,8 @@ public class NewPainelTabulado extends javax.swing.JPanel implements Themeable{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel abaContainer;
     private javax.swing.JPanel cabecalhosAba;
+    private javax.swing.JPanel cabecalhosContainer;
     private javax.swing.JPanel espacador;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
     
